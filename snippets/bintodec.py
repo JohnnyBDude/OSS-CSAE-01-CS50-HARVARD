@@ -1,4 +1,4 @@
-def bin2doc(bin):
+def bin2dec(bin):
     """
     This fucntion takes a binary digit in 
     form of python list, with the least
@@ -6,7 +6,7 @@ def bin2doc(bin):
     it into binary number
     """
     remainder = bin
-    doc = 0
+    dec = 0
     current = 1
     # As long, as there are any items left
     # in the bin list, we take the last
@@ -15,17 +15,17 @@ def bin2doc(bin):
     # then we multiply the current by two an move on
     while bin:
         if remainder.pop():
-            doc += current
+            dec += current
         current *= 2
-    return doc
+    return dec
        
 
 # We will use assertions to test our code
 # If it doesnt go the way expected, exception is raised
-assert(bin2doc([0]) == 0)
-assert(bin2doc([1]) == 1)
-assert(bin2doc([1,0,1]) == 5)
+assert(bin2dec([0]) == 0)
+assert(bin2dec([1]) == 1)
+assert(bin2dec([1,0,1]) == 5)
 
 # In windows, the terminal window goes away too quick
 # so we just wait for any key
-raw_input()
+raw_input("Press any key")
